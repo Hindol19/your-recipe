@@ -1,0 +1,20 @@
+@import "../../css-config/mixins.scss";
+
+.footer-container {
+  font-family: "Anuphan", sans-serif;
+  color: white;
+  background-color: #212121;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #212121 2px solid;
+  border-right: #212121 2px solid;
+  .footer-text {
+    text-align: center;
+    font-size: 12px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../css-config/mixins.scss";
+
+.single-item-container {
+  font-family: "Anuphan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  background-color: #468cff;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  @include md {
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+  }
+  .singleItem-layout {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+      margin: 60px;
+      max-width: 1200px;
+      // margin: auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    // justify-content: center;
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      justify-content: center;
+      margin: 30px;
+      @include md {
+        padding: 20px;
+        height: 100%;
+      }
+      h1 {
+        font-size: 23px;
+        margin-bottom: 14px;
+        // border-bottom: 2px solid black;
+        @include md {
+          font-size: 40px;
+        }
+      }
+
+      .recipe-list {
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        // align-items: center;
+        div {
+          padding: 9px 11px;
+          margin: 4px 0;
+          // text-align: center;
+          // background-color: #042c2791;
+          border-radius: 25px;
+          font-weight: 600;
+          color: rgb(0, 0, 0);
+          font-size: 15px;
+
+          @include md {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}

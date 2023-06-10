@@ -1,0 +1,60 @@
+@import "../../css-config/mixins.scss";
+.search-container {
+  padding-top: 30px;
+  // background: linear-gradient(to right, #f47878, #922424);
+  min-height: calc(100vh - 20px);
+  background-color: #468cff;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  font-family: "Anuphan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include md {
+    padding-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .query-none {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.347);
+    color: white;
+    padding: 15px;
+    height: 200px;
+    border-radius: 15px;
+    @include md {
+      height: 400px;
+    }
+    .text {
+      font-size: 24px;
+      font-weight: 600;
+      @include md {
+        font-size: 45px;
+      }
+    }
+    svg {
+      font-size: 50px;
+      @include md {
+        font-size: 100px;
+        padding: 20px;
+      }
+    }
+  }
+
+  .searched-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+      align-items: center;
+      justify-content: center;
+      flex-flow: wrap;
+    }
+  }
+}
