@@ -25,11 +25,11 @@ function SingleItem({ setRecipeId, recipe }) {
         </div>
         <div className="right-content">
           <h1>RECIPE</h1>
-          <div className="recipe-list">
+          <ul className="recipe-list">
             {recipe?.recipe?.ingredients.map((ing) => {
-              return <div>{ing?.text}</div>;
+              return <li>{ing?.text}</li>;
             })}
-          </div>
+          </ul>
         </div>
       </div>
     </div>

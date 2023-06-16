@@ -26,16 +26,17 @@
     height: 60px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 auto;
-    max-width: 1200px;
+    // margin: 0 auto;
+    // max-width: 1200px;
     @include md {
-      height: 80px;
+      height: 100px;
     }
     .left {
       cursor: pointer;
-      font-size: 12px;
+      font-size: 20px;
       font-weight: 600;
       margin: 0 5px;
       @include md {
@@ -47,11 +48,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 150px;
-      margin: 0 10px;
+      width: 180px;
+      height: 20px;
+      // margin: 0 10px;
       @include md {
         width: 60%;
-        height: 30px;
+        height: 41px;
         // width: max-content;
       }
       input {
@@ -61,26 +63,26 @@
         border: none;
       }
       input::placeholder {
-        font-size: 8px;
+        font-size: 10px;
         text-align: center;
         transform: translateY(-25%);
         @include md {
           font-size: 16px;
           transform: translateY(0);
-          letter-spacing: 4px;
+          letter-spacing: 2px;
         }
       }
       svg {
         cursor: pointer;
-        font-size: 15px;
-        margin: 1px;
+        font-size: 22px;
+        // margin: 1px;
         margin-left: 0;
         color: grey;
-        border: 1px solid white;
+        // border: 1px solid white;
         background-color: white;
         @include md {
-          border: 2px solid white;
-          font-size: 28px;
+          // border: 2px solid white;
+          font-size: 43px;
         }
         &:hover {
           color: rgb(0, 0, 0);
@@ -89,12 +91,13 @@
     }
     .right {
       font-size: 8px;
-
+      display: none;
       span {
         transform: translateY(-50%);
         margin: 0 5px;
       }
       @include md {
+        display: block;
         font-size: 18px;
         span {
           margin: 0 14px;
