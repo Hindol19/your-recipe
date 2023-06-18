@@ -1,5 +1,6 @@
 @import "../../../css-config/mixins.scss";
 .items-container {
+  font-family: "Anuphan", sans-serif;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -21,21 +22,14 @@
   .image {
     height: 170px;
     width: 95%;
+    border-radius: 7px;
+    margin: 7px 0;
     @include md {
+      margin: 12px 0;
       height: 300px;
     }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-      margin: 7px 0;
-      margin-bottom: 0;
-      // overflow: hidden;
-      @include md {
-        // border-radius: 20px;
-        margin: 12px 0;
-      }
+    .outlay {
+      display: none;
     }
   }
   .lower {
@@ -94,6 +88,27 @@
             margin: 0 5px;
           }
         }
+      }
+    }
+  }
+}
+
+.in-search-page {
+  .items-container:hover {
+    cursor: pointer;
+    .outlay {
+      display: block;
+      color: rgb(255, 191, 0);
+      background-color: rgba(0, 0, 0, 0.6156862745);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      @include md {
+        font-size: 54px;
       }
     }
   }

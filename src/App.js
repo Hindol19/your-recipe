@@ -1,4 +1,7 @@
 import "./App.css";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -13,7 +16,9 @@ function App() {
   const [itemList, setItemList] = useState({});
   const [recipe, setRecipe] = useState({});
   const [recipeId, setRecipeId] = useState(0);
-
+  useEffect(() => {
+    Aos.init();
+  }, []);
   // console.log(recipe);
   return (
     <BrowserRouter>

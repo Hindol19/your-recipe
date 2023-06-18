@@ -4,9 +4,13 @@ import DemoPic from "../../../assets/itemPic.jpg";
 function Items({ img, title, calories, cuisine, caution, mealType }) {
   console.log(caution);
   return (
-    <div className="items-container">
-      <div className="image">
-        <img src={img} alt="" />
+    <div className="items-container" data-aos="fade-up">
+      <div
+        className="image"
+        style={{ background: `url(${img}) center center/cover` }}
+      >
+        <div className="outlay">CLICK TO SEE RECIPE</div>
+        {/* <img src={img} alt="" /> */}
       </div>
       <div className="lower">
         <span className="title">{title}</span>

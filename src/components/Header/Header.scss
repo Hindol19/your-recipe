@@ -96,6 +96,9 @@
         transform: translateY(-50%);
         margin: 0 5px;
       }
+      span:hover {
+        cursor: pointer;
+      }
       @include md {
         display: block;
         font-size: 18px;

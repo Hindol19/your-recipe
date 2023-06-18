@@ -8,7 +8,11 @@ function Home() {
     <>
       <div className="home-container">
         {/* // When nothing is Searched */}
-        <div className="not-searched">
+        <div
+          className="not-searched"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div className="left">
             <h1 className="main-text">
               SEARCH FOR YOUR FAVOURITE RECIPES HERE

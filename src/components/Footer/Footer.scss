@@ -4,17 +4,89 @@
   font-family: "Anuphan", sans-serif;
   color: white;
   background-color: #212121;
-  height: 50px;
+  height: 520px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: #212121 2px solid;
   border-right: #212121 2px solid;
+  @include md {
+    height: 280px;
+  }
   .footer-text {
-    text-align: center;
+    flex-flow: wrap;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    // text-align: center;
+    max-width: 300px;
     font-size: 12px;
     @include md {
+      justify-content: space-around;
+      max-width: 1400px;
       font-size: 18px;
+    }
+    .about {
+      width: 400px;
+      text-align: justify;
+      // text-align: left;
+    }
+    .footer-component {
+      height: 160px;
+      @include md {
+        height: 200px;
+      }
+      h2 {
+        font-size: 15px;
+        @include md {
+          font-size: 20px;
+        }
+      }
+      .footer-sub-content {
+        color: rgba(255, 255, 255, 0.638);
+        line-height: 20px;
+        font-size: 12px;
+        svg {
+          font-size: 20px;
+          @include md {
+            font-size: 25px;
+          }
+          &:hover {
+            cursor: pointer;
+            color: rgba(250, 204, 76, 0.638);
+          }
+        }
+        .page-links:hover {
+          cursor: pointer;
+          color: rgba(250, 204, 76, 0.638);
+        }
+        @include md {
+          font-size: 15px;
+          line-height: 25px;
+        }
+        .contact-content {
+          display: flex;
+          flex-direction: row;
+          .contact-icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            svg {
+              font-size: 15px;
+              margin-right: 10px;
+              @include md {
+                font-size: 20px;
+              }
+              &:hover {
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

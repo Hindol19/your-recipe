@@ -9,9 +9,23 @@ function SingleItem({ setRecipeId, recipe }) {
   // console.log(id);
   setRecipeId(id);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 5000 milliseconds = 5 seconds
+
+    // Clean up the timer when the component unmounts or when isLoading becomes false
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   console.log(recipe?.recipe?.ingredients);
   return (
     <div className="single-item-container">
+      <div className={isLoading && "preloader"}></div>
       <div className="singleItem-layout">
         <div className="left-content">
           <Items

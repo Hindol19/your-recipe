@@ -4,16 +4,34 @@
   font-family: "Anuphan", sans-serif;
   display: flex;
   flex-direction: column;
+
   //   justify-content: center;
-  // background-color: #468cff;
+  background-color: #cdd3ff;
   // background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-  background: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80")
-    no-repeat center center/cover;
-  box-shadow: inset 0 0 10em 2em #000;
+  // background: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80")
+  //   no-repeat center center/cover;
+  // box-shadow: inset 0 0 10em 2em #000;
   @include md {
-    height: 900px;
+    // height: 900px;
     justify-content: center;
     align-items: center;
+  }
+  .preloader {
+    background: url("../../assets/Loaders/grey_style.gif") no-repeat center
+      center/cover;
+    background-size: 20%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    // height: calc(100vh + 400px);
+    height: 100vh;
+    padding-bottom: 100px;
+    width: 100%;
+    background-color: black;
+    @include md {
+      background-size: 8%;
+      margin-top: -50px;
+    }
   }
   .singleItem-layout {
     margin-top: 40px;

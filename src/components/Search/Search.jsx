@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import useFetch from "../../hooks/useFetch";
 import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 import Items from "./Items/Items";
@@ -13,8 +13,22 @@ function Search({ itemList, query, recipe_id, setSearch, setRecipe }) {
     setRecipe(res);
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 5000 milliseconds = 5 seconds
+
+    // Clean up the timer when the component unmounts or when isLoading becomes false
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="search-container">
+      <div className={isLoading && "preloader"}></div>
       {!query.length && (
         <div className="query-none">
           <div className="text">
@@ -25,7 +39,7 @@ function Search({ itemList, query, recipe_id, setSearch, setRecipe }) {
       )}
 
       {!!query.length && (
-        <div className="searched-items">
+        <div className="searched-items in-search-page">
           {itemList?.map((item) => {
             const uri = item?.recipe.uri;
             const recipe_id_url = uri.split("#")[1];
